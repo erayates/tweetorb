@@ -5,6 +5,7 @@ import "@/css/satoshi.css";
 import "@/css/style.css";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 
 export default function RootLayout({
   children,
@@ -14,17 +15,16 @@ export default function RootLayout({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
 
-  // const pathname = usePathname();
-
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    const loadTimeout = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(loadTimeout);
   }, []);
 
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <div className="dark:bg-boxdark-2 dark:text-bodydark">
-          {loading ? <Loader /> : children}
+          {loading ? <Loader /> : <DefaultLayout>{children}</DefaultLayout>}
         </div>
       </body>
     </html>
