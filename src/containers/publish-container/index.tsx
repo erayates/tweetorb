@@ -1,6 +1,6 @@
 "use client";
 
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import Breadcrumb from "@/components/ui/breadcrumb";
 import TweetPreview from "@/components/tweet-preview";
 import CreateTweet from "./create-tweet";
 import React, { useState } from "react";

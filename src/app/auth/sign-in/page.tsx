@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import Breadcrumb from "@/components/ui/breadcrumb";
 import { Metadata } from "next";
 import loginIllustration from "../../../../public/images/illustration/illustration-login.svg";
 
