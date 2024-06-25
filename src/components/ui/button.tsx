@@ -15,7 +15,19 @@ export type ButtonProps = React.DetailedHTMLProps<
   ButtonOptions;
 
 type ButtonVariant = "outline" | "contained";
-type ButtonColor = "dark" | "primary" | "success" | "meta-3";
+type ButtonColor = "dark" | "primary" | "success" | "meta";
+
+const variant = {
+  outlined: "border bg-transparent",
+  contined: "bg-opacity-100",
+};
+
+const color = {
+  primary: "bg-primary text-white",
+  success: "bg-success text-white",
+  dark: "bg-black text-white",
+  meta: "bg-meta-3 text-white",
+};
 
 const getVariant = (variant: ButtonVariant) => {
   switch (variant) {
@@ -42,7 +54,7 @@ const getColor = (color: ButtonColor, variant: ButtonVariant) => {
       return variant === "contained"
         ? "bg-black text-white"
         : "border-black text-black";
-    case "meta-3":
+    case "meta":
       return variant === "contained"
         ? "bg-meta-3 text-white"
         : "border-meta-3 text-meta-3";

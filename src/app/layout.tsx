@@ -4,7 +4,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import "@/styles/satoshi.css";
 import "@/styles/style.css";
 import React, { useEffect, useState } from "react";
-import Loader from "@/components/common/Loader";
+import Loader from "@/components/common/loader";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 
 export default function RootLayout({

@@ -113,9 +113,7 @@
     @apply dark:!border-b-boxdark;
 }
 
-.flatpickr-calendar {
-    @apply !p-6 dark:!bg-boxdark dark:!text-bodydark dark:!shadow-8 2xsm:!w-auto;
-}
+
 
 .flatpickr-day {
     @apply dark:!text-bodydark dark:hover:!border-meta-4 dark:hover:!bg-meta-4;
